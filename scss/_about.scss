@@ -1,0 +1,30 @@
+.about {
+  color: $clr-secondary;
+
+  h2 {
+    font-size: 1.8rem;
+    margin: 2rem 0;
+  }
+
+  &__img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  @include breakpoint-up(md) {
+    &__container {
+      flex-direction: row;
+    }
+
+    &__me {
+      padding: 4rem;
+
+      h2,
+      p {
+        text-align: left;
+      }
+    }
+  }
+}

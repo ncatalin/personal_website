@@ -1,0 +1,28 @@
+.projects {
+  &__header {
+    margin-bottom: 5rem;
+  }
+
+  @include breakpoint-up(sm) {
+    &__content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 1rem;
+    }
+
+    .card {
+      display: grid;
+      grid-template-rows: auto 80px 1fr auto;
+
+      &__header {
+        align-self: center;
+      }
+    }
+  }
+
+  @include breakpoint-up(md) {
+    &__content {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

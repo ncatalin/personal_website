@@ -1,0 +1,42 @@
+.contact {
+  @include breakpoint-up(md) {
+    &__info,
+    &__form {
+      width: 50%;
+      margin: 0 auto;
+    }
+  }
+  &__form {
+    input,
+    textarea {
+      color: $clr-white;
+      border: none;
+      border-radius: 3px;
+      padding: 0.5rem 1rem;
+      margin-bottom: 0.35rem;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: $clr-white;
+    }
+
+    input:focus,
+    textarea::placeholder {
+      color: $clr-white;
+    }
+
+    input:focus {
+      outline: none;
+    }
+
+    input.error--border,
+    textarea.error--border {
+      border: 2px $clr-red solid;
+    }
+
+    .btn {
+      border: none;
+    }
+  }
+}

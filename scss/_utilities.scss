@@ -1,0 +1,140 @@
+// Helper Classes for colors
+.text {
+  &--primary {
+    @include text-color($clr-primary);
+  }
+  &--secondary {
+    @include text-color($clr-secondary);
+  }
+  &--light {
+    @include text-color($clr-light);
+  }
+  &--white {
+    @include text-color($clr-white);
+  }
+}
+
+.bg {
+  &--primary {
+    @include bg-color($clr-primary);
+  }
+  &--secondary {
+    @include bg-color($clr-secondary);
+  }
+  &--light {
+    @include bg-color($clr-light);
+  }
+  &--white {
+    @include bg-color($clr-white);
+  }
+}
+
+// Display Helpers
+.d--none {
+  @include display(none);
+}
+
+.d--block {
+  @include display(block);
+}
+
+.d--flex {
+  @include display(flex);
+}
+
+.flex--column {
+  flex-direction: column;
+}
+
+.flex--row {
+  flex-direction: row;
+}
+
+.align--center {
+  align-items: center;
+}
+
+.align--end {
+  align-items: flex-end;
+}
+
+.justify--center {
+  justify-content: center;
+}
+
+.justify--end {
+  justify-content: flex-end;
+}
+
+.justify--spacebet {
+  justify-content: space-between;
+}
+
+.text--center {
+  text-align: center;
+}
+
+// Section Helpers
+
+.section--header {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+.section--info {
+  font-size: 1.3rem;
+  line-height: 1.3;
+}
+
+.section--pt {
+  padding-top: 5.5rem;
+}
+.section--pb {
+  padding-bottom: 3rem;
+}
+
+.line {
+  height: 5px;
+  width: 4.5rem;
+  background: $clr-secondary;
+  margin: 0.35rem auto 3rem auto;
+}
+
+// Buttons
+.btn {
+  cursor: pointer;
+  padding: 10px 20px;
+  border: 2px solid #fff;
+  border-radius: 3px;
+  font-size: 20px;
+
+  &--primary {
+    @include text-color($clr-white);
+    @include bg-color(transparent);
+
+    &:hover {
+      @include text-color($clr-secondary);
+      @include bg-color($clr-primary);
+      border-color: $clr-primary;
+      transition: all 0.4s ease;
+    }
+  }
+
+  &--secondary {
+    @include text-color($clr-white);
+    @include bg-color($clr-secondary);
+  }
+}
+
+.error--msg {
+  display: none;
+}
+
+.error--msg.error {
+  display: block;
+  text-align: left;
+  color: $clr-red;
+  border-radius: 3px;
+  padding: 0.2rem 0.5rem;
+  margin-bottom: 0.35rem;
+}

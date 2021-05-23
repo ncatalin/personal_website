@@ -1,0 +1,35 @@
+@mixin text-color($color) {
+  color: $color;
+}
+
+@mixin bg-color($color) {
+  background-color: $color;
+}
+
+@mixin display($display) {
+  display: $display !important;
+}
+
+$breakpoints-up: (
+  "sm": "640px",
+  "md": "1024px",
+  "lg": "1400px",
+);
+
+$breakpoints-down: (
+  "sm": 639px,
+  "md": 1023px,
+  "lg": 1399px,
+);
+
+@mixin breakpoint-up($size) {
+  @media (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-down($size) {
+  @media (max-width: map-get($breakpoints-down, $size)) {
+    @content;
+  }
+}
