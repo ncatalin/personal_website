@@ -41,13 +41,12 @@ function emailValidation(email) {
 
 // Form validation func
 function formError(e) {
-  e.preventDefault();
-
   const nameValue = nameInput.value;
   const emailValue = emailInput.value;
   const messageValue = messageInput.value;
 
   if (nameValue.length <= 0) {
+    e.preventDefault();
     nameInput.classList.add("error--border");
     nameError.classList.add("error");
 
@@ -57,6 +56,7 @@ function formError(e) {
     }, 5000);
   }
   if (!emailValidation(emailValue)) {
+    e.preventDefault();
     emailInput.classList.add("error--border");
     emailError.classList.add("error");
     setTimeout(() => {
@@ -66,6 +66,7 @@ function formError(e) {
   }
 
   if (messageValue.length <= 0) {
+    e.preventDefault();
     messageInput.classList.add("error--border");
     messageError.classList.add("error");
 
